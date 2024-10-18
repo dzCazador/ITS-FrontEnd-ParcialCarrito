@@ -25,5 +25,8 @@ export const useCartStore = defineStore({
       const featuredBooks = this.data.filter(book => book.featured)
       return featuredBooks
     },
+    totalPrice(): number {
+      return this.data.reduce((total, book) => total + book.price, 0)
+    }
   },
 })

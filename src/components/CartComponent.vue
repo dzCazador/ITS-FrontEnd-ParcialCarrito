@@ -20,6 +20,9 @@ const reactiveCartStore = reactive(cartStore);
             </div>
         </div>
     </div>
+    <div> 
+        Total: $ {{ reactiveCartStore.totalPrice() }}.00
+    </div>
 </template>
 
 <style scoped>
@@ -31,6 +34,7 @@ const reactiveCartStore = reactive(cartStore);
     position: relative;
     background: #e5e5e5;
 }
+
 
 .item-wrapper {
     position: relative;
